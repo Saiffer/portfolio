@@ -283,17 +283,10 @@ header {
   margin-top: 40px;
 }
 
-.contact {
-  display: flex;
-  flex-direction: column;
-  width: 43%;
-  margin: 0 auto;
-  padding: 20px;
-}
+
 
 .form-wrapper {
   border: 1px solid black;
-  width: 50%;
   margin: 0 auto;
 }
 
@@ -321,13 +314,8 @@ header {
 
 .btn-container {
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 8px;
+  padding-top: 28px;
+  padding-bottom: 50px;
 }
 
 .submit:hover {
@@ -336,48 +324,64 @@ header {
   transition: 1s;
 }
 
-/* .submit:hover {
-  background-color: #4d21ec;
-  cursor: pointer;
-  color: #ff0000;
-  transition: 1s;
-}
-
-.submit-text {
-  text-align: center;
-  padding: 20px;
-} */
-
 .form-header {
-  background: url("img/form-header.jpg") no-repeat center;
+  background: url("img/form-header.jpg")  center;
   width: 100%;
-  /* position: relative; */
   z-index: 1;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   padding: 164px 15px 164px 15px;
   color: #ffffff;
 }
 
-.form-header-h2 {
-  font-size: 2rem;
-  z-index: 1;
+
+.names, .contacts {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.names-firstname, .names-lastname, .contacts-email, .contacts-phone  {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-dropdown, .message-subject, .message-message__text {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  margin: 0 auto;
+}
+
+.message-subject, .message-message__text {
+  width: 55%;
+}
+
+.contact label {
+  margin: 0 auto;
+  padding-bottom: 10px;
 }
 
 .form-contact {
-  z-index: 1;
-  width: 670px;
+  z-index: 10;
+  width: 67%;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
   /* position: relative; */
   border: 1px solid black;
+margin:0 auto;
 }
+
+
 
 .container-contact {
   width: 100%;  
@@ -389,28 +393,30 @@ header {
   /* padding:35px; */
   /* padding-top: 400px; */
   background: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
   z-index: 1;
 }
 
 .contact-form {
   margin-top: 60px;
-  position: relative;
+  
   width: 100%;
   height: 100vh;
+  z-index: 10;
 }
 
 .contact-bg {
   /* position: absolute; */
-  z-index: -1;
+  z-index: -10;
   background: url("img/google-map-background.jpg") no-repeat center center;
   background-size: cover;
   width: 100%;
-  height: 100vh;
-  filter: contrast(50%) opacity(75%);
+  padding-top: 100px;
+  padding-bottom: 100px;
   
+}
+
+#contact-form {
+  margin-bottom: 20px;
 }
 
 .grid-container__footer {
@@ -528,17 +534,24 @@ header {
 @media (max-width: 640px) {
   header {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-areas: 'navigation';
+    grid-template-columns: auto auto;
+    grid-template-areas: 'navigation' 'logo';
     position: static;
   }
 
   .logo {
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
     grid-row: 1/2;
-    margin-left: 350px;
+    margin-right: 50px;
+    width: 200px;
+    height: 150px;
   }
+
+  /* .logo-image {
+    max-width: 100%;
+    height: 150px;
+  } */
 
   /******************************************/
   /************HAMBURGER MENU***************/
@@ -710,6 +723,54 @@ header {
   .logo-footer {
     display: none;
   }
+
+
+  /**************************/
+  /*****FORM FLEX MOBILE*****/
+  /**************************/
+
+  
+
+  .names, .contacts {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .message {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .names-firstname, .names-lastname, .contacts-email, .contacts-phone  {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message-dropdown, .message-subject, .message-message__text {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    margin: 0 auto;
+  }
+  
+  .message-subject, .message-message__text {
+    width: 100%;
+  }
+  
+  .contact {
+    margin: 30px;
+  }
+
+  .contact label {
+    margin: 0 auto;
+    padding-bottom: 10px;
+  }
+
+
 
   /* .grid-container {
     display: grid;

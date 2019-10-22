@@ -36,7 +36,7 @@
                 </div>
                 
             </nav>
-            <div class="logo"><a href="#"><img src="img/logo.jpg" alt=""></a></div>
+            <div class="logo"><a href="#"><img class="logo-image" src="img/logo.jpg" alt="logo-image"></a></div>
         </header>
         
         
@@ -163,36 +163,71 @@
 <section id="education-expierence">
 
 </section>
-<section id="contact-me">
-<h2 class="contact-me__header">Contact Me</h2>
-<div class="contact-form">
-    
-        <div class="container-contact">
-                <div class="form-contact">
-                    <div class="form-header">
-                        <span class="form-header-h2">Contact Me</span>
+
+<section id="contact-form">
+        <h2 class="contact-me__header">Contact Me</h2>
+        <div class="contact-bg">
+        <div class="form-contact">
+                <div class="form-header">
+                    
+                </div>
+        <form class="contact" action="#">
+                <div class="names">
+                    <div class="names-firstname">
+                            <label for="firstname">Enter first name: </label>
+                            <input type="text" id="firstname"><br>
                     </div>
-                 
-                    <form class="contact" action="#">
-                        <label for="name">Enter name: </label>
-                        <input type="text" id="name"><br>
-                        <label for="name">Enter email: </label>
-                        <input type="email" id="email"><br>
-                        <label for="name">Enter question: </label>
-                        <input type="textarea" id="question">
-                        <div class="btn-container">
-                            <button class="submit">
-                                <span class="submit-text">SUBMIT</span>
-                            </button>
+                    <div class="names-lastname">
+                            <label for="lastname">Enter last name: </label>
+                            <input type="text" id="lastname"><br>
+                    </div>
+                        
+                        
+                </div>
+                <div class="contacts">
+                    <div class="contacts-email">
+                            <label for="email">Enter email: </label>
+                            <input type="email" id="email"><br>
+                    </div>
+                    <div class="contacts-phone">
+                            <label for="phone">Enter phone: </label>
+                            <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                            <small>Format: 123-456-7890</small><br>
+                    </div>
+                       
+                        
+                </div>
+                <div class="message">
+                    <div class="message-dropdown">
+                            <label for="dropdown">Select option</label>
+                            <select name="dropdown" id="dropdown">
+                                <option value="webDev">Web Development</option>
+                                <option value="UIdesign">UI/UX Design</option>
+                                <option value="graphicDesign">Graphic Design</option>
+                            </select>
+                    </div>
+                        <div class="message-subject">
+                                <label for="subject">Enter subject: </label>
+                                <input type="text" id="subject"><br>
                         </div>
-                    </form>
-                </div> 
-            
-        </div> 
-    <div class="contact-bg"></div>
-    
-    </div>
+                        <div class="message-message__text">
+                                <label for="messages">Enter message: </label>
+                                <textarea name="message" id="message" rows="7" cols="33" placeholder="Enter your message...">
+        
+                                </textarea>
+                        </div>  
+                </div>
+                
+                <div class="btn-container">
+                    <button class="submit">
+                        <span class="submit-text">SUBMIT</span>
+                    </button>
+                </div>
+            </form>  
+        </div>
+        </div>
 </section>
+
 <footer id="footer">
     <div class="grid-container__footer">
         <div class="quick-links">
